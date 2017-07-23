@@ -1,0 +1,321 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% University Assignment Title Page 
+% LaTeX Template
+% Version 1.0 (27/12/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% WikiBooks (http://en.wikibooks.org/wiki/LaTeX/Title_Creation)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+% 
+% Instructions for using this template:
+% This title page is capable of being compiled as is. This is not useful for 
+% including it in another document. To do this, you have two options: 
+%
+% 1) Copy/paste everything between \begin{document} and \end{document} 
+% starting at \begin{titlepage} and paste this into another LaTeX file where you 
+% want your title page.
+% OR
+% 2) Remove everything outside the \begin{titlepage} and \end{titlepage} and 
+% move this file to the same directory as the LaTeX file you wish to add it to. 
+% Then add \input{./title_page_1.tex} to your LaTeX file where you want your
+% title page.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\title{Title page with logo}
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+
+
+\documentclass[12pt]{article}
+
+
+
+
+\documentclass{book}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage{textcomp}
+
+\usepackage{pgfplots}
+\pgfplotsset{width=10cm,compat=1.9}
+
+\usepackage[english]{babel}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+
+
+
+
+\begin{document}
+
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+
+\center % Center everything on the page
+ 
+%----------------------------------------------------------------------------------------
+%	HEADING SECTIONS
+%----------------------------------------------------------------------------------------
+
+\textsc{\LARGE IIT Guwahati}\\[1.5cm] % Name of your university/college
+\textsc{\Large SYSTEM PROGRAMMING LAB}\\[0.5cm] % Major heading such as course name
+%\textsc{\large Minor Heading}\\[0.5cm] % Minor heading such as course title
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\HRule \\[0.4cm]
+{ \huge \bfseries PYTHON PROJECT}\\[0.4cm] % Title of your document
+\HRule \\[1.5cm]
+
+
+%	LOGO SECTION
+%----------------------------------------------------------------------------------------
+
+\includegraphics{download.png}\\[1cm] % Include a department/university logo - this will require the graphicx package
+ 
+%----------------------------------------------------------------------------------------
+ 
+%----------------------------------------------------------------------------------------
+%	AUTHOR SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}{0.6\textwidth}
+\begin{flushleft} \large
+
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\emph {Team:}
+
+
+Shivram \textsc Gowtham \textsc 150101069
+
+
+Rohan \textsc Aggarwal  \textsc 150101052
+
+Ankit \textsc Vyas \textsc 1501010__
+
+Shradha \textsc Pruthi \textsc 150101068
+% Your name
+
+\end{flushleft}
+\end{minipage}
+~
+\begin{minipage}{0.4\textwidth}
+\begin{flushright} \large
+\emph \textsc{} % Supervisor's Name
+\end{flushright}
+\end{minipage}\\[2cm]
+
+% If you don't want a supervisor, uncomment the two lines below and remove the section above
+%\Large \emph{Author:}\\
+%John \textsc{Smith}\\[3cm] % Your name
+
+%----------------------------------------------------------------------------------------
+%	DATE SECTION
+%----------------------------------------------------------------------------------------
+
+%{\large \today}\\[2cm] % Date, change the \today to a set date if you want to be precise
+
+%----------------------------------------------------------------
+
+\vfill % Fill the rest of the page with whitespace
+
+\end{titlepage}
+
+
+%\begin{abstract}
+%Your abstract.
+%\end{abstract}
+
+\section{Introduction}
+\subsection{Purpose}
+\paragraph{}
+\begin{itemize}
+\item\   \hspace
+The purpose of this report is to explain why we undertook this project and also to analyze the various underlying mechanisms used for generating the final feature vectors and their corresponding complexities.
+\end{itemize}
+\bigskip
+\bigskip
+\bigskip
+\subsection{Motivation and Problem Statement}
+\paragraph{}
+\begin{itemize}
+\item\   \hspace
+Countless attacks happen everyday in this new era of networking. In such a time it is important to be fully prepared for oncoming attacks which can be only properly done by analyzing past attacks.
+\\~\\
+\item\   \hspace
+A collection of past attacks were prepared and there was a need to organize them properly into feature vectors so that proper machine learning could be undertaken on it and the data could be analyzed.
+\\~\\
+\item\   \hspace
+Given the attack data for various attack types such as Hydra-FTP, Hydra-SSH, Adduser, Java-Meterpreter,Meterpreter and Webshell, the aim of the project is to create features which are 3/5/7 grams. The most frequent of these are used to generate feature vectors for both training and test data. This dataset is used as training and validation data for various machine learning models. 
+\end{itemize}
+
+\\~\\
+\\~\\
+
+\begin{center}
+ \begin{tabular}{||c c c c||} 
+ 
+ \hline
+ Attack Type & 3 Grams & 5 Grams & 7 Grams \\ [0.5ex] 
+ \hline\hline
+ Adduser & 25762 & 25650 & 787 \\ 
+ \hline
+ Hydra-FTP & 7 & 78 & 5415 \\
+ \hline
+ Hydra-SSH & 545 & 778 & 7507 \\
+ \hline
+ Java-Meterpreter & 545 & 18744 & 7560 \\
+ \hline
+ 
+ Meterpreter & 545 & 18744 & 7560 \\
+ \hline
+ 
+ Webshell & 545 & 18744 & 7560 \\
+ \hline
+ 
+ Normal & 88 & 788 & 6344 \\ [1ex] 
+ \hline
+\end{tabular}
+
+\end{center}
+\begin{center}
+ Table 1. Number of N grams found in each type.
+\end{center}
+\bigskip
+\bigskip
+
+\subsection{Approach to solve the problem}
+
+\paragraph{}
+\begin{itemize}
+\item\   \hspac\
+First, the attack types were separated into training and test data. Out of 10 folders for each type, a python program took 70\%\ (7 folders) and concatenated all files in them. This is done so that processing of data can be done fast when we generate 3 grams etc. Similarly, 30\%\ of the files (last 3 folders) are merged for each type. At the end of this step, we will have 12 files (6 types, 2 for each).  
+\\~\\
+\item\   \hspace For the Normal data, we used files in “Training Data Master”  as training data and files in “Validation Data Master”  as test data.All files in one folder are merged.
+\\~\\
+\bigskip
+\item\   \hspace The next step is to use the 7 (six types and one normal) merged files to find unique 3/5/7 grams. To avoid access of file again and again, an intermediate file is created for each type which stores all the 7 grams in their order of occurrence in the merged files. End of each file in the merged file is indicated separately.
+\\~\\
+
+\item\   \hspace  Any of 3/5/7 grams can be directly found from the intermediate file made. The program uses the end of file indication in order to get 3/5 grams from the last 7 gram of each file.
+\\~\\
+\item\   \hspace  Python dictionary is used to order the N-grams by frequency. Dictionary is hash map (exact time complexities explained later), a very fast way to add/update/delete elements in a set. At the end, the dictionary is sorted based on the frequency of N-grams and is written to a file. This process is done for all the 7 types.
+\\~\\
+\item\   \hspace  
+The final step is to create features from the generated N-gram files. Top 30\%\ N-grams from each type is taken with proper set union. For this union, dictionary is again used so as to optimize the algorithm.
+
+\\~\\
+\item\   \hspace Now training data and test data feature vectors are created. For this purpose, a vector consisting of count of each of the features is made for each and every file in training,test dataset.Again the intermediate files are used to achieve this to reduce large number of file access. The process is again optimized using python dictionary.
+\end{itemize}
+
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+
+\section{Complexity analysis}
+\label{sec:examples}
+
+\bigskip
+\subsection{File access and concatenation}
+\paragraph{}
+\begin{itemize}
+\item\   \hspac
+Each file open/close operation is O(1) and each file is accessed exactly one time while concatenating. At later stages, only the intermediate files are used. Hence total complexity is O(Number of files)
+\end{itemize}
+\\~\\
+\subsection{Intermediate files generation}
+\paragraph{}
+\begin{itemize}
+\item\   \hspac
+The concatenated file is processed once completely and the 7-grams of each file are listed. This is done optimally to ensure that we go through each number exactly once instead of 7 times. A queue is maintained to do this. Hence, the complexity will be O(N), where N is total number of elements in the concatenated file.   
+\end{itemize}
+
+\subsection{Generate N-grams}
+\paragraph{}
+\begin{itemize}
+\item\   \hspac
+M = No of 7-grams in the intermediate file
+\item\   \hspac
+All N grams are taken from the intermediate file. A dictionary of N-gram,Frequency is maintained.
+\item\   \hspac
+When a new N-gram comes, it is added to the dictionary ( O(1) average, O(Log M) worst). If not, its frequency is incremented. For this purpose, the N-gram is initially searched in the dictionary which takes O(1) average ( O(Log M) worst) time. 
+\item\   \hspac
+The dictionary is sorted based on frequency (O(M Log M)). Then each element of the dictionary is written to a file (O(M)).
+
+\item\   \hspac
+The total time complexity is O(M Log M)
+\end{itemize}
+
+\subsection{Feature vector generation}
+\paragraph{}
+\begin{itemize}
+\item\   \hspac
+In this step, the count of each feature is obtained from every single file. The intermediate file is used to reduce the frequent file access. M is the number of features.The features are first initialized into a dictionary (O(M) time).
+\item\   \hspac
+Each N-gram in one particular file is made into a dictionary with frequency (as done before). Assume there are K N-grams. Hence this takes O(K Log K) time.
+\item\   \hspac
+ Now all keys of this dictionary are searched in the feature dictionary. If found, the count in feature vector for this file is updated. Searching is again worst O(Log M) time.
+\item\  \hspac
+The total time complexity is  \[ K_t * Log(K) + K_t * Log(M) \]
+ where the total number of N grams across all files is K_t 
+
+\end{itemize}
+
+\bigskip
+\bigskip
+\bigskip
+\begin{tikzpicture}
+\begin{axis}[
+    title={Time v Number of grams},
+    xlabel={Number of grams},
+    ylabel={Time in seconds},
+    xmin=0, xmax=8,
+    ymin=0, ymax=100,
+    xtick={0,1,2,3,4,5,6,7,8},
+    ytick={0,20,40,60,80,100},
+    legend pos=north west,
+    ymajorgrids=true,
+    grid style=dashed,
+]
+ 
+\addplot[
+    color=blue,
+    mark=square,
+    ]
+    coordinates {
+    (3,17.83)(5,45.33)(7,62.90)
+    };
+    
+ 
+\end{axis}
+\end{tikzpicture}
+
+
+\end{document}
+
