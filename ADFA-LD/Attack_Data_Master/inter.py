@@ -8,9 +8,14 @@ filew = open("intermed" + attackType +".txt","w")
 
 
 for line in filer:
+	if(len(line) == 0):
+		continue
 	array = []
-	array = map(int, line.strip().split(' '))
-	
+	try:
+		array = map(int, line.strip().split(' '))
+	except:
+		print "EMpty line"
+		continue
 
 	string = ""
 	for y in range(0,6):
